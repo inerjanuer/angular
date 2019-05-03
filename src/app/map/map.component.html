@@ -1,0 +1,84 @@
+<!-- <div class="container">  
+  <div *ngFor="let num of numbers" class="row" >
+    {{num}}
+    <div *ngFor="let nums of numbers" class=" btn btn-primary col-1">
+        {{num}},{{nums}}
+    </div>
+  </div>
+</div> -->
+<div class="row">
+<div class="col-xs-5 col-sm-5 col-md-5 ml-50px">
+    <h2 class="centered">Zona de Ataque</h2>
+    <div class="row">
+      <div class="btn btn-marco">
+        \
+      </div>
+      <div class="btn btn-marco" *ngFor="let num of numbers">
+        {{num}}
+      </div>
+    </div>
+
+    <div class="row" *ngFor="let nums of numbers; index as i">
+      <div class="btn btn-marco">
+        {{i}}
+      </div>
+      <button class="btn btn-info btn-map" (click)="evaluateImpact(i,0)">
+      </button>
+      <button  class="btn btn-info btn-map" (click)="evaluateImpact(i,1)">
+      </button>
+      <button  class="btn btn-info btn-map" (click)="evaluateImpact(i,2)">
+      </button>
+      <button class="btn btn-info btn-map" (click)="evaluateImpact(i,3)">
+      </button>
+      <button  class="btn btn-info btn-map" (click)="evaluateImpact(i,4)">
+      </button>
+      <button  class="btn btn-info btn-map" (click)="evaluateImpact(i,5)">
+      </button>
+      <button  class="btn btn-info btn-map" (click)="evaluateImpact(i,6)">
+      </button>
+      <button  class="btn btn-info btn-map" (click)="evaluateImpact(i,7)">
+      </button>
+      <button  class="btn btn-info btn-map" (click)="evaluateImpact(i,8)">
+      </button>
+      <button  class="btn btn-info btn-map" (click)="evaluateImpact(i,9)">
+      </button>
+    </div>
+  </div>
+  <div class="col-xs-5 col-sm-5 col-md-5">
+      <h2 class="centered">Mi Zona</h2>
+      <div class="row">
+        <div class="btn btn-marco">
+          \
+        </div>
+        <div class="btn btn-marco" *ngFor="let num of numbers">
+          {{num}}
+        </div>
+      </div>
+  
+      <div class="row" *ngFor="let map of maps; index as i">
+        <div class="btn btn-marco">
+          {{i}}
+        </div>
+        <button class="btn btn-info btn-map">{{map[0]}}
+        </button>
+        <button  class="btn btn-info btn-map">{{map[1]}}
+        </button>
+        <button  class="btn btn-info btn-map">{{map[2]}}
+        </button>
+        <button class="btn btn-info btn-map">{{map[3]}}
+        </button>
+        <button  class="btn btn-info btn-map">{{map[4]}}
+        </button>
+        <button  class="btn btn-info btn-map">{{map[5]}}
+        </button>
+        <button  class="btn btn-info btn-map">{{map[6]}}
+        </button>
+        <button  class="btn btn-info btn-map">{{map[7]}}
+        </button>
+        <button  class="btn btn-info btn-map">{{map[8]}}
+        </button>
+        <button  class="btn btn-info btn-map">{{map[9]}}
+        </button>
+      </div>
+    </div>
+    </div>  
